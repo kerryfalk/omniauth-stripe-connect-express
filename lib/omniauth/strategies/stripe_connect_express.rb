@@ -6,7 +6,8 @@ module OmniAuth
       option :name, :stripe_connect_express
 
       option :client_options, {
-        :site => 'https://connect.stripe.com/express/'
+        :site => 'https://connect.stripe.com',
+        :authorize_url => 'https://connect.stripe.com/express/oauth/authorize'
       }
 
       option :authorize_options, [:scope, :stripe_landing, :always_prompt]
