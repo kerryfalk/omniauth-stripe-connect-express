@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::StripeConnect do
-  let(:fresh_strategy) { Class.new(OmniAuth::Strategies::StripeConnect) }
+describe OmniAuth::Strategies::StripeConnectExpress do
+  let(:fresh_strategy) { Class.new(OmniAuth::Strategies::StripeConnectExpress) }
 
 
   before(:each) do
