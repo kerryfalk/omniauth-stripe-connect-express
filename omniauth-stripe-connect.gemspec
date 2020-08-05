@@ -14,9 +14,9 @@ Read the Stripe Connect docs for more details: https://stripe.com/docs/connect
   gem.files         = `git ls-files | grep -v example`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "omniauth-stripe-connect"
+  gem.name          = "omniauth-stripe-connect-express"
   gem.require_paths = ["lib"]
-  gem.version       = OmniAuth::StripeConnect::VERSION
+  gem.version       = OmniAuth::StripeConnectExpress::VERSION
   gem.license       = "MIT"
 
   gem.add_dependency 'omniauth', '~> 1.3'

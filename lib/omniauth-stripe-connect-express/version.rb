@@ -1,5 +1,5 @@
 module OmniAuth
-  module StripeConnect
-    VERSION = "2.10.1"
+  module StripeConnectExpress
+    VERSION = "1.0"
   end
 end
