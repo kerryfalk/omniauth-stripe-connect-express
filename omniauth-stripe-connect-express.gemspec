@@ -2,8 +2,8 @@
 require File.expand_path('../lib/omniauth-stripe-connect-express/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Isaac Sanders"]
-  gem.email         = ["isaac@isaacbfsanders.com"]
+  gem.authors       = ["Kerry Falk"]
+  gem.email         = ["kerry@wearebarnone.com"]
   gem.description   = %q{Stripe Connect Express OAuth2 Strategy for OmniAuth 1.0.}
   gem.summary       = %q{
 Supports the OAuth 2.0 server-side and client-side flows.

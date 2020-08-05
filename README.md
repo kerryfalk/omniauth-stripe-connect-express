@@ -1,6 +1,8 @@
-# OmniAuth::StripeConnect
+# OmniAuth::StripeConnectExpress
 
-Stripe Connect OAuth2 Strategy for OmniAuth 1.0.
+Stripe Connect Express OAuth2 Strategy for OmniAuth 1.0, forked from: https://github.com/isaacsanders/omniauth-stripe-connect
+
+This gem enables connection to Stripe's Connect Express account type.
 
 Supports the OAuth 2.0 server-side and client-side flows.
 Read the Stripe Connect docs for more details: https://stripe.com/connect
@@ -9,7 +11,7 @@ Read the Stripe Connect docs for more details: https://stripe.com/connect
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-stripe-connect'
+    gem 'omniauth-stripe-connect-express'
 
 And then execute:
 
@@ -17,11 +19,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omniauth-stripe-connect
+    $ gem install omniauth-stripe-connect-express
 
 ## Usage
 
-OmniAuth::Strategies::StripeConnect is simply a Rack middleware. Read the OmniAuth
+OmniAuth::Strategies::StripeConnectExpress is simply a Rack middleware. Read the OmniAuth
 1.0 docs for detailed instructions: https://github.com/intridea/omniauth.
 
 ### Non-Devise
@@ -30,7 +32,7 @@ Here's a quick example, adding the middleware to a Rails app in
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :stripe_connect, ENV['STRIPE_CONNECT_CLIENT_ID'], ENV['STRIPE_SECRET']
+  provider :stripe_connect_express, ENV['STRIPE_CONNECT_CLIENT_ID'], ENV['STRIPE_SECRET']
 end
 ```
 
@@ -39,12 +41,12 @@ end
 You need to declare the provider in your `config/initializers/devise.rb`:
 
 ```ruby
-config.omniauth :stripe_connect, "STRIPE_CONNECT_CLIENT_ID", "STRIPE_SECRET"
+config.omniauth :stripe_connect_express, "STRIPE_CONNECT_CLIENT_ID", "STRIPE_SECRET"
 ```
 
 You'll also need to add some configuration to your devise model (e.g. User in `app/models/user.rb`) along with any other OmniAuth providers you might have:
 ```ruby
-:omniauthable, :omniauth_providers => [:stripe_connect]
+:omniauthable, :omniauth_providers => [:stripe_connect_express]
 ```
 
 ### General Usage
@@ -127,14 +129,3 @@ Here is an example of the Auth Hash you get back from calling `request.env['omni
   }
 }
 ```
-
-## Additional Tutorials
-[Stripe Connect in Rails Tutorial](https://web.archive.org/web/20160313043319/http://www.munocreative.com/nerd-notes/winvoice)
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
